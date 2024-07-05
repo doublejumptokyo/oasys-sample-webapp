@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #141414;
+  color: #fff;
+}
+
+input {
+  color: black;
+}
