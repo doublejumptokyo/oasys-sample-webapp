@@ -1,0 +1,3 @@
+self.addEventListener('fetch', (event) => {
+  // Custom service worker logic...
+});
