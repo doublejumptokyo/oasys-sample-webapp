@@ -5,14 +5,14 @@ import { defaultWagmiConfig } from '@web3modal/wagmi/react/config';
 
 import { customChains } from './chains';
 import { featuredWalletIds } from './wallets';
-import { siweConfig } from './siwe';
+// import { siweConfig } from './siwe';
 
 export const walletConnectProjectId = process.env.NEXT_PUBLIC_PROJECT_ID || '';
 
 const metadata = {
   name: 'Web3Modal',
   description: 'DJT Sample',
-  url: 'http://localhost', // origin must match your domain & subdomain
+  url: 'https://' + process.env.NEXT_PUBLIC_VERCEL_URL || 'http://localhost',
   icons: ['https://avatars.githubusercontent.com/u/37784886'],
 };
 
@@ -31,7 +31,8 @@ export const config = defaultWagmiConfig({
 
 createWeb3Modal({
   wagmiConfig: config,
-  siweConfig,
+  // opt out
+  // siweConfig,
   projectId: walletConnectProjectId,
   featuredWalletIds,
 });
