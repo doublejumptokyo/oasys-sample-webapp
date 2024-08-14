@@ -8,7 +8,6 @@ import { Providers } from '@/app/providers';
 export const metadata: Metadata = {
   title: 'OasysWallet WebApp',
   description: 'A Web Wallet supporting Oasys Passport',
-  // url: 'https://pj-oaw.vercel.app/',
   icons: ['/icon-96x96.png'],
   applicationName: 'Oasys Passport for Web',
   manifest: '/manifest.webmanifest',

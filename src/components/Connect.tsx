@@ -14,13 +14,12 @@ export function Connect() {
   const {
     currentWalletType,
     instantWallet,
-    provider,
     loginInstantWallet,
     disconnectInstantWallet,
     wipeInstantWallet,
   } = useWalletContext();
   const { open } = useWeb3Modal();
-  const { data: session } = useSession();
+  // const { data: session } = useSession();
 
   return (
     <div>
@@ -34,9 +33,9 @@ export function Connect() {
           </button>
         )}
 
-        {isConnected && session && (
+        {/*isConnected && session && (
           <p>SIWE session: {JSON.stringify(session)}</p>
-        )}
+        )*/}
 
         {!isConnected && currentWalletType == WalletType.None && (
           <>

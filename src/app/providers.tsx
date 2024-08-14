@@ -18,12 +18,12 @@ export function Providers({ children }: { children: React.ReactNode }) {
   }, []);
 
   return (
-    <SessionProvider>
-      <WagmiProvider config={config}>
-        <QueryClientProvider client={queryClient}>
-          <WalletProvider>{mounted && children}</WalletProvider>
-        </QueryClientProvider>
-      </WagmiProvider>
-    </SessionProvider>
+    // <SessionProvider>
+    <WagmiProvider config={config}>
+      <QueryClientProvider client={queryClient}>
+        <WalletProvider>{mounted && children}</WalletProvider>
+      </QueryClientProvider>
+    </WagmiProvider>
+    // </SessionProvider>
   );
 }
