@@ -7,7 +7,6 @@ import { Connected, PassportSupport } from './Connected';
 import { EIP4361 } from './EIP4361';
 import { EIP712 } from './EIP712';
 import { EthSign } from './EthSign';
-import { EthSignTransaction } from './EthSignTransaction';
 import { NetworkSwitcher } from './NetworkSwitcher';
 import { PersonalSign } from './PersonalSign';
 import { SendRawTransactionOAS } from './SendRawTransactionOAS';
@@ -30,7 +29,6 @@ export const SupportedMethods = () => {
       <BlockNumber />
       <PersonalSign />
       <EthSign />
-      <EthSignTransaction />
       <SignTypedDataV4 />
       <SendTransaction />
       <WatchContractEvents />

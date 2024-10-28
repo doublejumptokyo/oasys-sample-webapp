@@ -3,8 +3,6 @@ import Head from 'next/head';
 
 import type { Metadata } from 'next';
 
-import { Providers } from '@/app/providers';
-
 export const metadata: Metadata = {
   title: 'OasysWallet WebApp',
   description: 'A Web Wallet supporting Oasys Passport',
@@ -30,9 +28,7 @@ export default function RootLayout({
         <meta name="mobile-web-app-capable" content="yes" />
       </Head>
       <body>
-        <main>
-          <Providers>{children}</Providers>
-        </main>
+        <main>{children}</main>
       </body>
     </html>
   );
