@@ -4,6 +4,7 @@ import { Connected, PassportSupport } from './Connected';
 import { EthCall } from './EthCall';
 import { EthRequestAccounts } from './EthRequestAccounts';
 import { EthSendRawTransaction } from './EthSendRawTransaction';
+import { EthSignTransaction } from './EthSignTransaction';
 import { useSupportedState } from './SupportedSwitcher';
 import { WalletAddEthereumChain } from './WalletAddEthereumChain';
 import { WalletGetPermission } from './WalletGetPermission';
@@ -24,6 +25,7 @@ export const UnsupportedMethods = () => {
       <EthRequestAccounts />
       <EthCall />
       <EthSendRawTransaction />
+      <EthSignTransaction />
       <WalletWatchAsset />
       <WalletScanQRCode />
       <WalletRegisterOnboarding />
