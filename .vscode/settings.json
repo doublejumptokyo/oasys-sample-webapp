@@ -3,5 +3,5 @@
   "editor.formatOnPaste": true,
   "editor.formatOnSave": true,
   "typescript.tsdk": "node_modules/typescript/lib",
-  "cSpell.words": ["Oasys", "viem", "wagmi"]
+  "cSpell.words": ["Appkit", "Oasys", "viem", "wagmi"]
 }

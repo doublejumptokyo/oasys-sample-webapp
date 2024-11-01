@@ -1,14 +1,14 @@
 'use client';
 
+import { useAppKit } from '@reown/appkit/react';
 import { BaseError } from 'viem';
 import { useAccount, useConnect, useDisconnect } from 'wagmi';
-import { useWeb3Modal } from '@web3modal/wagmi/react';
 
 export function Connect() {
   const { connector, isConnected } = useAccount();
   const { error } = useConnect();
   const { disconnect } = useDisconnect();
-  const { open } = useWeb3Modal();
+  const { open } = useAppKit();
 
   return (
     <div>
