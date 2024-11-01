@@ -1,7 +1,10 @@
 import '@/styles/globals.css';
 import Head from 'next/head';
+import { headers } from 'next/headers';
 
 import type { Metadata } from 'next';
+
+import { Providers } from './providers';
 
 export const metadata: Metadata = {
   title: 'OasysWallet WebApp',
@@ -16,6 +19,8 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const cookies = headers().get('cookie');
+
   return (
     <html>
       <Head>
@@ -28,7 +33,9 @@ export default function RootLayout({
         <meta name="mobile-web-app-capable" content="yes" />
       </Head>
       <body>
-        <main>{children}</main>
+        <Providers cookies={cookies}>
+          <main>{children}</main>
+        </Providers>
       </body>
     </html>
   );

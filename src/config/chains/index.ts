@@ -1,4 +1,5 @@
 import { mainnet, oasys } from 'viem/chains';
+import { AppKitNetwork } from '@reown/appkit/networks';
 
 import { homeVerseTestnet } from './definitions/homeVerseTestnet.js';
 import { oasysTestnet } from './definitions/oasysTestnet.js';
@@ -13,14 +14,14 @@ export { sepolia } from './definitions/sepolia.js';
 
 export type CustomChainInfo = (typeof customChains)[number];
 
-export const customChains = [
+export const customChains: [AppKitNetwork, ...AppKitNetwork[]] = [
   oasys,
   mainnet,
   sandVerse,
   sepolia,
   oasysTestnet,
   homeVerseTestnet,
-] as const;
+];
 
 export const getChainInfo = (chainId: number) => {
   return customChains.find((chain) => {
